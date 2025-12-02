@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+
+background:linear-gradient(150deg, #4e73df, #1cc88a );
+}
+.container
+{
+max-width: 900px;
+margin: 60px auto;
+}
+.apply_box{
+max-width: 600px;
+padding: 20px;
+background-color: antiquewhite;
+margin: 0 auto;
+margin-top: 50px;
+box-shadow: 4px 3px  5px black;
+border-radius: 10px;
+text-align: center;
+}
+.tittle_small{
+    font-size: 20px;
+}
+
+.form_container{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.form_control{
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+}
+label{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+input,
+select,
+textarea{
+    padding: 6px 10px;
+    border: 1px solid #434242;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+input:focus{
+    outline-color: rgb(155, 154, 151);
+}
+textarea:focus{
+    outline-color: #434242;
+}
+#file{
+    border-color: #434242 1px;
+    background-color: aliceblue;
+}
+.button_container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 1 / span 2;
+    margin-top: 20px;
+
+}
+button{
+    background-color: rgb(43, 43, 225);
+    border: transparent;
+    padding: 10px 20px;
+    color: rgb(238, 235, 232);
+    border-radius: 8px;
+    transition: 0.3s ease-in;
+}
+
+button:hover{
+    background-color: aliceblue;
+    border: 2px solid rgb(45, 45, 218);
+    color: blue;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+.textarea_control{
+    grid-column: 1 / span 2;
+    font-size: 15px;
+    font-weight: bold;
+}
+.textarea_control textarea{
+    width: 100%;
+}
+@media ( max-width: 600px)  {
+    .apply_box {
+        width: 90%;
+        margin: 20px auto;
+    }
+     .form_container {
+        grid-template-columns: 1fr; /* SINGLE COLUMN MOBILE */
+    }
+    .textarea_control {
+        grid-column: 1 / span 1; /* TEXTAREA ALSO SINGLE COLUMN */
+    }
+    .button_container {
+        grid-column: 1 / span 1;
+        justify-content: center; /* BUTTON CENTER ON MOBILE */
+    }
+     label, input, select {
+        text-align: left;
+    }
+    .textarea_control{
+        text-align: left;
+    }
+}
